@@ -1,0 +1,50 @@
+<style>
+    nav{
+        display:flex;
+        {% comment %} width:100%; {% endcomment %}
+        justify-content:space-around;
+        align-items:center;
+        background-color:lightgray;
+        padding:10px;
+        list-style-type: none;
+        font-size:18px;
+        {% comment %} border-radius:5px; {% endcomment %}
+        box-shadow:0px 0px 5px rgba(0,0,0,0.5);
+        margin:0;
+        text-decoration:none;
+    }
+    a{
+        color:black;
+        text-decoration:none;
+        font-weight:bold;
+        font-size:25px;
+        transition: color 0.3s ease;
+    }
+    ul{
+        display:flex;
+        list-style-type: none;
+        gap:1rem;
+    }
+    ul li{
+        cursor:pointer;
+        font-weight:bold;
+        font-size:20px;
+        border:1px solid transparent;
+        padding:1rem 2rem;
+        transition: 0.3s ease;
+        border-radius:5px;
+    }
+    ul li:hover{
+        color:darkblue;
+        border:1px solid darkblue;
+    }
+</style>
+<nav>
+    <a href="#">Logo</a>  <!-- link to home page -->
+    <ul>
+        <a href="{% url 'home' %}"><li>Home</li></a>
+        <a href="{% url 'about' %}"><li>About</li></a>
+        <a href="{% url 'contact' %}"><li>Contact Us</li></a>
+        
+    </ul>  <!-- list item -->
+</nav>

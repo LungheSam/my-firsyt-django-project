@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+
+{% block content %}
+    <div class="room-desc">
+        <h2 class="title-2">{{ room.id }}</h2>
+        <h1 class="title">{{ room.name }}</h1>
+        <p>{{ room.description }}</p>
+        <a href="/baseapp/" class="btn">Return to all rooms</a>
+    </div>
+{% endblock %}

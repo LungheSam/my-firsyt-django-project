@@ -1,0 +1,10 @@
+{% extends "todolist_app/base.html" %}
+<title>Register</title>
+{% block content %}
+    <form method="POST" class="m-5">
+        {% csrf_token %}
+        {{ register_form.as_p}}
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+
+{% endblock content %}

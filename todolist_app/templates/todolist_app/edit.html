@@ -1,0 +1,13 @@
+{% extends "todolist_app/base.html" %}
+
+{% block content %}
+    <form style="margin-top:2rem;" method="POST">
+        <div class="mb-3">
+          {% csrf_token %}
+          <input type="text" class="form-control" name="tasks" id="task-edit" placeholder="{{ task_object.tasks}}" value={{ task_object.tasks}} >
+          <input type="hidden" class="form-control" name="done" value={{ task_object.done}} >
+        </div>
+        <button type="submit" class="btn btn-primary">Update Task</button>
+    </form>
+
+{% endblock content %}
